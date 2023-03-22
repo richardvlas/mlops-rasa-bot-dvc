@@ -8,6 +8,6 @@ stages:
         - pipeline
         - policies
     deps:
-      - data
+      - ./data/
     outs:
       - ./models/
