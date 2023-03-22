@@ -1,0 +1,13 @@
+stages:
+  train:
+    cmd: >-
+      rasa data validate && 
+      rasa train --fixed-model-name ./models/model
+    params:
+      - config.yml:
+        - pipeline
+        - policies
+    deps:
+      - data
+    outs:
+      - ./models/

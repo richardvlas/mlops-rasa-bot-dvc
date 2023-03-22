@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: rasa data validate &&  rasa train --fixed-model-name ./models/model
+    deps:
+    - path: data
+      md5: 3aea1acc9e63b60a1446ebf1e45628bb.dir
+      size: 2259
+      nfiles: 3
+    params:
+      config.yml:
+        pipeline:
+        policies:
+    outs:
+    - path: ./models/
+      md5: dd73df8adb7705df187612f9529d3225.dir
+      size: 24977998
+      nfiles: 1
